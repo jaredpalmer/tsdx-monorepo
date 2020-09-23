@@ -1,6 +1,6 @@
 {
   "name": "@thefakeorg/react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Official React library for @thefakeorg",
   "author": "Jared Palmer",
   "repository": {
@@ -27,7 +27,7 @@
     "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "@thefakeorg/utils": "^0.0.0",
+    "@thefakeorg/utils": "^0.0.1",
     "tslib": "^2.0.0"
   },
   "publishConfig": {
