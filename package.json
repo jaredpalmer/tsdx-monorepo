@@ -21,12 +21,11 @@
   "scripts": {
     "lerna": "lerna",
     "start": "lerna run start --stream --parallel",
-    "size": "size-limit",
+    "size": "yarn build && size-limit",
     "test": "lerna run test --",
     "lint": "lerna run lint -- --fix",
     "build": "lerna run build",
     "start:app": "yarn run build && yarn --cwd example && yarn --cwd example start",
-    "prepublish": "lerna run prepublish",
     "cypress": "cypress run",
     "cypress:open": "cypress open",
     "changeset": "changeset",
