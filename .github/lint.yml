@@ -1,23 +1,18 @@
 name: Lint
 on: [push]
 jobs:
-  build:
-    name: Lint on Node ${{ matrix.node }} and ${{ matrix.os }}
-
+  lint:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node: ['12.x']
-
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
 
-      - name: Use Node ${{ matrix.node }}
+      - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node }}
+          version: 12.x
 
       - name: Install deps and build (with cache)
         uses: bahmutov/npm-install@v1

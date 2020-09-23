@@ -1,7 +1,7 @@
 name: Unit Test
 on: [push]
 jobs:
-  build:
+  test:
     name: Build and test on Node ${{ matrix.node }} and ${{ matrix.os }}
 
     runs-on: ${{ matrix.os }}
