@@ -34,52 +34,13 @@ This builds each package to `<packages>/<package>/dist` and runs the project in 
 You can play with local packages in the Parcel-powered example/playground.
 
 ```sh
-cd example
-yarn install # or yarn install
-yarn start
+yarn start:app
 ```
 
 This will start the example/playground on `localhost:1234`. If you have lerna running watch in parallel mode in one terminal, and then you run parcel, your playground will hot reload when you make changes to any imported module whose source is inside of `packages/*/src/*`. Note that to accomplish this, each package's `start` command passes TDSX the `--noClean` flag. This prevents Parcel from exploding between rebuilds because of File Not Found errors.
 
 Important Safety Tip: When adding/altering packages in the playground, use `alias` object in package.json. This will tell Parcel to resolve them to the filesystem instead of trying to install the package from NPM. It also fixes duplicate React errors you may run into.
 
-#### Yalc
+### Running Cypress
 
-[Yalc](https://github.com/whitecolor/yalc) is an alternative to `yarn/npm link` (and Parcel aliasing) that many developers find useful because it more closely mimics how NPM works. It works kind of like a local package registry via filesystem and symlinking magic.
-
-To do this, install yalc globally.
-
-Using NPM:
-
-```sh
-npm i yalc -g
-```
-
-Using Yarn:
-
-```sh
-yarn global add yalc
-```
-
-Then in each package's `start` command add a [`yalc publish`](https://github.com/whitecolor/yalc#publish) or `yalc push` as an TSDX `--onSuccess` hook.
-
-```diff
-"scripts": {
--   "start": "tsdx watch --verbose --noClean",
-+   "start": "tsdx watch --verbose --noClean --onSuccess yalc publish",
-    "build": "tsdx build --tsconfig tsconfig.build.json",
-    "test": "tsdx test",
-    "lint": "tsdx lint",
-    "prepublish": "npm run build"
-  },
-```
-
-In your example directory, now add each package via yalc
-
-```sh
-yalc add <package>
-# or
-yalc link <package>
-```
-
-There's definitely room for improvement with this workflow, so please contribute if you come up with something better.
+(In a third terminal) you can run Cypress and it will run your integration tests against the playground/example. If you want to keep integration tests and examples seperate you can copy the example folder to another folder called like `app` or whatever. Cypress will look for `localhost:1234` by default. If you change ports, also make sure to update [`.github/integration.yaml`](.github/integration.yml) as well.
