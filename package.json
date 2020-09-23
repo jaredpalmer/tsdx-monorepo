@@ -4,6 +4,7 @@
   "devDependencies": {
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
+    "cypress": "^5.2.0",
     "lerna": "^3.15.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -18,11 +19,9 @@
     "start": "lerna run start --stream --parallel",
     "test": "lerna run test --",
     "build": "lerna run build",
-    "prepublish": "lerna run prepublish"
-  },
-  "prettier": {
-    "trailingComma": "es5",
-    "singleQuote": true,
-    "semi": true
+    "start:app": "yarn run build && yarn --cwd example && yarn --cwd example start",
+    "prepublish": "lerna run prepublish",
+    "cypress": "cypress run",
+    "cypress:open": "cypress open"
   }
 }

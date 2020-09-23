@@ -5,7 +5,7 @@ import { Thing } from '@mono/react';
 
 const App = () => {
   return (
-    <div>
+    <div data-test-id="zop">
       <Thing message="hello worldzz" />
     </div>
   );
