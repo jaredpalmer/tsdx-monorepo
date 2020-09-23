@@ -4,12 +4,14 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.2.7",
     "@changesets/cli": "^2.10.3",
+    "@size-limit/preset-small-lib": "^4.6.0",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "cypress": "^5.2.0",
     "lerna": "^3.15.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "size-limit": "^4.6.0",
     "tsdx": "^0.13.2",
     "typescript": "^3.9.7"
   },
@@ -19,14 +21,32 @@
   "scripts": {
     "lerna": "lerna",
     "start": "lerna run start --stream --parallel",
+    "size": "yarn build && size-limit",
     "test": "lerna run test --",
     "lint": "lerna run lint -- --fix",
     "build": "lerna run build",
     "start:app": "yarn run build && yarn --cwd example && yarn --cwd example start",
-    "prepublish": "lerna run prepublish",
     "cypress": "cypress run",
     "cypress:open": "cypress open",
     "changeset": "changeset",
     "release": "changeset publish"
-  }
+  },
+  "size-limit": [
+    {
+      "path": "packages/react/dist/*.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "packages/react/dist/*.esm.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "packages/utils/dist/*.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "packages/utils/dist/*.esm.js",
+      "limit": "10 KB"
+    }
+  ]
 }
