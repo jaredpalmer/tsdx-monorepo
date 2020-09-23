@@ -2,6 +2,7 @@
   "name": "mono",
   "private": true,
   "devDependencies": {
+    "@changesets/changelog-github": "^0.2.7",
     "@changesets/cli": "^2.10.3",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
