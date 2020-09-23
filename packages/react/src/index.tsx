@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { toSlug } from '@mono/utils';
+import { toSlug } from '@thefakeorg/utils';
 
 export interface SlugProps {
   message: string;

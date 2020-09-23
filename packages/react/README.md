@@ -1,5 +1,5 @@
-# @mono/react
+# @thefakeorg/react
 
-[![Stable release](https://img.shields.io/npm/v/@mono/utils.svg)](https://npm.im/@mono/utils)
+[![Stable release](https://img.shields.io/npm/v/@thefakeorg/utils.svg)](https://npm.im/@thefakeorg/utils)
 
-Official React package for @mono
+Official React package for @thefakeorg

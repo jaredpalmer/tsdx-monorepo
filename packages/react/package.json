@@ -1,7 +1,7 @@
 {
-  "name": "@mono/react",
+  "name": "@thefakeorg/react",
   "version": "0.0.0",
-  "description": "Official React library for @mono",
+  "description": "Official React library for @thefakeorg",
   "author": "Jared Palmer",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
     "react-dom": "^16.8.0"
   },
   "dependencies": {
-    "@mono/utils": "^0.0.0",
+    "@thefakeorg/utils": "^0.0.0",
     "tslib": "^2.0.0"
   },
   "publishConfig": {
