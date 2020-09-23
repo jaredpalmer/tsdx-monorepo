@@ -8,3 +8,7 @@ export interface SlugProps {
 export function Slug(props: SlugProps) {
   return <>{toSlug(props.message)}</>;
 }
+
+export function Bold({ message }: { message: string }) {
+  return <b>{message}</b>;
+}
