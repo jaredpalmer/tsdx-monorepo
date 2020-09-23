@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { toSlug } from '@mono/utils';
 
-export interface ThingProps {
+export interface SlugProps {
   message: string;
 }
 
-export function Thing(props: ThingProps) {
+export function Slug(props: SlugProps) {
   return <>{toSlug(props.message)}</>;
 }

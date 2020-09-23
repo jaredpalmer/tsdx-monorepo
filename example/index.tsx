@@ -1,12 +1,12 @@
 import 'react-app-polyfill/ie11';
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Thing } from '@mono/react';
+import { Slug } from '@mono/react';
 
 const App = () => {
   return (
     <div data-test-id="zop">
-      <Thing message="hello worldzz" />
+      <Slug message="hello worldzz" />
     </div>
   );
 };
