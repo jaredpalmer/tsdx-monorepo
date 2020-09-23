@@ -2,6 +2,7 @@
   "name": "mono",
   "private": true,
   "devDependencies": {
+    "@changesets/cli": "^2.10.3",
     "@types/react": "^16.9.43",
     "@types/react-dom": "^16.9.8",
     "cypress": "^5.2.0",
@@ -18,10 +19,13 @@
     "lerna": "lerna",
     "start": "lerna run start --stream --parallel",
     "test": "lerna run test --",
+    "lint": "lerna run lint -- --fix",
     "build": "lerna run build",
     "start:app": "yarn run build && yarn --cwd example && yarn --cwd example start",
     "prepublish": "lerna run prepublish",
     "cypress": "cypress run",
-    "cypress:open": "cypress open"
+    "cypress:open": "cypress open",
+    "changeset": "changeset",
+    "release": "changeset publish"
   }
 }
