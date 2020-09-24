@@ -27,3 +27,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publishing canary releases to npm registry
+        if: steps.changesets.outputs.published != 'true'
+        run: |
+          git checkout master
+          yarn changeset version --snapshot canary
+          yarn changeset publish --tag canary
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
