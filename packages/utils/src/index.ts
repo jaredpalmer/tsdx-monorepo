@@ -45,3 +45,10 @@ export function toPhoneE164(phone: string): string {
   }
   return '+' + phone;
 }
+
+/**
+ * Add two numbers together
+ */
+export function sum(a: number, b: number): number {
+  return a + b;
+}
