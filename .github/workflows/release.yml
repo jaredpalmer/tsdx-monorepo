@@ -33,7 +33,7 @@ jobs:
         run: |
           git checkout master
           yarn changeset version --snapshot canary
-          yarn changeset publish --tag canary
+          npm run release --tag canary
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
