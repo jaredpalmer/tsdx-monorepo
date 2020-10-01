@@ -1,5 +1,5 @@
 # @thefakeorg/react
 
-[![Stable release](https://img.shields.io/npm/v/@thefakeorg/utils.svg)](https://npm.im/@thefakeorg/utils)
+[![Stable release](https://img.shields.io/npm/v/@thefakeorg/react.svg)](https://npm.im/@thefakeorg/react)
 
 Official React package for @thefakeorg
