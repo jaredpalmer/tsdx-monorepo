@@ -1,5 +1,12 @@
 # @thefakeorg/react
 
+## 0.0.3
+
+### Patch Changes
+
+- Updated dependencies [[`f5e5ace`](https://github.com/jaredpalmer/tsdx-monorepo/commit/f5e5acecc7d115ec73dafe5a9ba0b12f63628347)]:
+  - @thefakeorg/utils@0.0.2
+
 ## 0.0.2
 
 ### Patch Changes
