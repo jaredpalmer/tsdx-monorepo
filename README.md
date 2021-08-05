@@ -1,6 +1,6 @@
 # TSDX Monorepo Example/Playground
 
-If you are here, you should checkout https://turborepo.com. It's roughly 2-5x faster than this setup (Lerna + Yarn workspaces) thanks to its intelligent (remote) caching, task scheduling, and incremental execution.
+_If you are here, you should checkout https://turborepo.com. It's roughly 2-5x faster than this setup (Lerna + Yarn workspaces) thanks to its intelligent (remote) caching, task scheduling, and incremental execution._
 
 ## Usage
 
